@@ -1,0 +1,588 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.body-header {
+    width: 100vw;
+    height: 60vh;
+    /* background-image:linear-gradient(to right, #003366, #00cc99); */
+    /* background: linear-gradient(to right, #050d37, #12996c), rgba(164, 10, 10, 0.2); */
+    background-image: url('./mountain-image.jpg');
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+    background-size: cover;
+    background-position: center;
+    /* break flow and goes inside the page  such that we can add
+    list items over the image  */
+    background-attachment: fixed;
+    /* opacity: 0.8; */
+}
+
+/*****  unordered list            *****/
+/*  commone for the list and icon  */
+.ul-common-style {
+    /* remvoe the dots  */
+    list-style: none;
+    /* ul is block level element set text align property over the ul */
+    text-align: center;
+    margin: 0px;
+}
+
+.ul-common-style li {
+    /* list items shuld be inline-block rather than block  */
+    display: inline-block;
+    margin: 10px;
+}
+
+/* toggle btn ul list and social btn 
+three things inside body header nav */
+.body-header nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* socail btn */
+.social-media-btn {
+    margin: -1px;
+    /* abhi ke liye none ker do media tag me 
+    bata do ki  */
+    display: none;
+    border-radius: 20px;
+    border: 2px  solid wheat;
+    background-color: rgb(75, 0, 249);
+    padding: 5px;
+    /* when we set the position then block level element do not occupied the full width occuped only the content widht  */
+    position: fixed;
+    top: 10px;
+    right: 10px
+}
+.social-media-btn a{
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+  
+}
+.social-media-btn a:hover{
+
+    border-bottom: 2px solid red;
+    color: #403066;
+    transition: all  2s ease-in-out 0.2;
+
+}
+
+.dropdown-list-social{
+    display: none;
+    background-color: #8e8d88;
+    position: fixed;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    top: 35px;
+    right: 65px;
+}
+
+.dropdown-list-social ul{
+    list-style: none;
+}
+.dropdown-list-social ul i{
+    color: #ffffff;
+}
+.dropdown-menu-social:hover .dropdown-list-social{
+    display: block;
+   
+}
+
+
+.bars {
+    color: yellow;
+    margin: 0px;
+    /* default case when width is greater than the 600px */
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+
+.bars i {
+    font-size: 1.5rem;
+}
+
+.dropdown-list {
+    margin: 0px;
+    display: none;
+    position: fixed;
+    border-radius: 20px;
+    background-color: rgb(108, 110, 108);
+    top: 30px;
+    left: 3%;
+}
+
+.dropdown-list ul {
+     margin: 0.2rem 0.2rem;
+    text-align: center;
+    padding: 0px 0.8rem;
+    list-style: none;
+} 
+
+.dropdown-list ul a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 1s ease-in 0.2s;
+
+}
+
+.dropdown-list ul a:hover {
+    color: rgb(13, 50, 236);
+    border-bottom: 2px solid rgb(119, 31, 31);
+}
+
+.dropdown-menu:hover .dropdown-list {
+    display: block;
+    /* position: absolute;
+    top: 30px;
+    left: 3%; */
+}
+
+/* Responsive  */
+@media only screen and (max-width:600px) {
+    nav .ul-common-style li {
+        display: none;
+    }
+
+    .social-Container {
+        display: none;
+    }
+
+    nav #social-btn {
+        display: block;
+    }
+
+    nav #toggle-btn {
+        display: block;
+    }
+
+    .body-header nav {
+
+        justify-content: space-between;
+    }
+
+    /* when the max-width is 600px then bar shoud be visibie  */
+    .bars {
+        display: block;
+    }
+
+    /* when browser width is less tan the 600px then  */
+ 
+    .social-media-btn{
+        display: block;
+    }
+    .my-name{
+        display: none;
+    }
+}
+
+/******** Give more style over the text and anchor tag  ************/
+#ul-id-nav li a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+
+
+}
+
+#ul-id-nav li a:hover {
+    color: rgb(248, 247, 250);
+    /* color: rgba(0, 0, 0, 0.5); */
+    border-bottom: 2px solid rgb(253, 251, 251);
+    background-color: rgb(98, 26, 232);
+
+    /* On doing hvoer color should change in 0.5section and
+    border from the bottom shold be change in 2s  */
+    /* transition: color 0.5s, border-bottom 2s; */
+    transition: all 1s ease-in-out 0.2s;
+    /* all means for the all css  */
+    /*  2s all transition happens in 2s  */
+    /* timing funtion  */
+    /* transition delay 0.2s after 0.2s transition start  */
+
+
+}
+
+/*  name in center */
+.my-name {
+    height: 40px;
+    color: white;
+    text-align: center;
+    /* border: 2px solid rgb(72, 61, 61); */
+    margin-top: 10%;
+}
+.my-name span{
+    background-color: #ff00ff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* Socail  icon are also list give same call to the social container */
+/*   */
+#ul-id-icon li a i {
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+
+#ul-id-icon li a i:hover {
+    color: rgb(246, 222, 11);
+    transition: all 2s ease-in-out 0.2;
+    border-radius: 5px solid white;
+
+
+}
+
+/************  Each section of the main   ***************/
+
+/* every odd child color should be like that  */
+section:nth-child(2n+1) {
+    background: rgb(249, 246, 246);
+}
+
+/* every even child of sectin color should be like that */
+section:nth-child(2n) {
+    background: rgb(156, 233, 245);
+}
+
+section:target {
+    background-color: rgb(188, 203, 203);
+}
+
+section {
+    /* main section occupied the complete widht of the browser */
+    width: 100vw;
+    /* height will be accordig the inside content */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**  About section   **/
+
+#about #my-image {
+    /* text-align: center; */
+    width: 12.5rem;
+    /* margin: 0px auto; */
+}
+
+#about #my-image img {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    margin-top: -40px;
+    position: sticky;
+}
+
+#about #my-image img:hover {
+    border: 2px solid rgb(146, 106, 30);
+    box-shadow: 2px 2px 10px 3px red;
+}
+
+#about-discription {
+    width: 80%;
+    margin: 0px auto;
+    /* font-size: 25px; */
+    font-weight: 600;
+}
+
+/********* main  section  ********/
+
+.section-heading span {
+    font-size: 40px;
+    color: #285794;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+
+}
+
+/*skills progress*/
+.skills-display {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.skill-progress {
+    width: 9rem;
+    border: 2px solid red;
+    height: 2.2rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0px 2px 5px rgba(153, 138, 138, 0.3);
+    margin: 20px;
+}
+
+.eighty-percent-parents {
+    width: 85%;
+
+    height: inherit;
+
+    border-radius: 0.6rem;
+    /* background-color: rgb(215, 24, 85); */
+}
+
+.skill-progress:nth-child(odd) .eighty-percent-parents {
+    background-color: rgb(255, 221, 0);
+}
+
+.skill-progress:nth-child(even) .eighty-percent-parents {
+    background-color: rgb(255, 0, 0);
+}
+
+
+.eighty-percent-parents .skill-name {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+/****  Work experience  ****/
+* {
+    margin: 0;
+}
+
+/* time line container */
+.timeline {
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+    position: relative;
+    margin: 10px auto;
+}
+
+.timeline-box:nth-child(even) {
+    left: 55%;
+    overflow-wrap: break-word;
+}
+
+.timeline-box:nth-child(odd) {
+    left: 5%;
+    overflow-wrap: break-word;
+}
+
+.time-line-divider {
+    width: 0;
+    height: 90%;
+    border: 1px dotted rgb(79, 7, 7);
+    position: absolute;
+    left: 50%;
+    top: 10%;
+
+}
+
+.time-line-travel {
+    position: sticky;
+    top: 25%;
+    transform: rotate(90deg);
+    color: rgb(47, 64, 255);
+}
+
+.timeline-box {
+    width: 40%;
+    min-height: 150px;
+    position: relative;
+    text-align: end;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    ;
+    background-image: linear-gradient(to left, rgb(64, 48, 155), rgb(249, 1, 202));
+}
+
+.timeline-box h4 {
+    font-style: bold;
+    color: #ffcc00;
+}
+
+.timeline-box h3 {
+    color: #ec7b11;
+}
+
+/* pseudo element for the icon */
+.timeline-box h4::before {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    background: url(./fornt-end-developer-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+@media screen and (max-width:600px) {
+    .timeline-box {
+        width: 100%;
+        margin-top: 10px;
+        /* no other Property can overide the position property  */
+        left: 10% !important;
+    }
+
+    .time-line-divider {
+        left: 5% !important;
+    }
+
+    .outer-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact_container {
+        flex-direction: column !important;
+        /* Change to column direction for horizontal alignment */
+        align-items: stretch;
+        /* Stretch items to full width */
+    }
+
+    .container-items {
+        width: 100% !important;
+        /* Set the width to 100% for full width */
+    }
+
+    /*  */
+}
+
+
+/* education section  */
+
+/* pseudo element for the icon */
+.timeline-edu-box h4::before {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    background: url(./commone-college-icon.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+
+/* Portfolio section */
+
+
+
+.portfolio_container {
+    width: 80%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;
+    /* border: 2px solid red;  */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.portfolio_progress {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 20px;
+    /* border-radius:50%; */
+
+
+}
+
+.portfolio_progress img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.portfolio_progress img:hover {
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    border: 5px solid rgb(225, 215, 215);
+    box-shadow: 2px 2px 20px 13px rgb(240, 100, 6);
+    transition: all 1s ease-in-out 0.1s;
+}
+
+
+
+
+
+
+
+/**** contact section   ****/
+
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+    background: linear-gradient(90deg, #2857a4, #403066);
+
+}
+
+.contact_container {
+    width: 80%;
+    height: auto;
+    display: flex;
+    /* align the items horizontaly */
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align item align the item vertically  */
+    align-items: center;
+
+}
+
+/* flex items of container display */
+.container-items {
+    width: 40%;
+    height: auto;
+    /* border: 2px solid red; */
+    margin: 10px;
+    /* border: 2px solid rgb(136, 255, 0); */
+}
+
+#contact-left p {
+    border-bottom: 1px solid rgb(34, 34, 33);
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+
+}
+
+#contact-right i {
+    color: rgb(179, 89, 62);
+}
+
+/*  wrap the word and paste in the next line */
+
+#contact-right {
+    overflow-wrap: break-word;
+    color: white;
+}
